@@ -1,0 +1,13 @@
+{{ $original := .Page.Resources.GetMatch ( .Get 0 ) }}
+{{ $preview := $original.Resize "694x" }}
+{{ $alt := .Get 1 }}
+
+<p><div class="image-wrapper ratio-16x9">
+{{ if lt $original.Width 694 }}
+<img loading="lazy" src="{{ $original.RelPermalink | relURL | safeURL }}" width="{{ $original.Width }}" alt="{{ $alt }}">
+{{ else }}
+<a href="{{ $original.RelPermalink | relURL | safeURL }}" target="_self" title="{{ $alt }}">
+    <img loading="lazy" src="{{ $preview.RelPermalink | relURL | safeURL }}" width="{{ $preview.Width }}" alt="{{ $alt }}" >
+</a>
+{{ end }}
+</div></p>

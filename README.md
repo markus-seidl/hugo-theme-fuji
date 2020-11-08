@@ -1,3 +1,10 @@
+# Modifications
+
+* cimg
+    * Lazy loading HTML attribute
+    * Generate preview 694x, zoom on click on original image
+
+
 # 🍥 Fuji 🍥
 
 Fuji is a minimal Hugo theme with full dark mode support and GitHub Primer markdown style.
